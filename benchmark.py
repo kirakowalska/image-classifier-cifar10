@@ -1,5 +1,7 @@
 from skimage.feature import hog
 import numpy as np
+from load_cifar import load_batch
+
 def compute_hog_features(images):
     features = []
     hog_images = []
@@ -12,13 +14,11 @@ def compute_hog_features(images):
 if __name__ == '__main__':
 
     # Import data
-    from keras.datasets import cifar10
-    (X_train, y_train), (X_test, y_test) = cifar10.load_data()
-    y_train = y_train.flatten()
-    y_test  = y_test.flatten()
+    X_train, y_train = load_batch()
+    X_test, y_test = load_batch(test=True)
 
     # Subset data to 1/10th
-    n_train = X_train.shape[0] // 10
+    n_train = X_train.shape[0] // 2
     X_train = X_train[0:n_train]
     y_train = y_train[0:n_train]
     print("Number of training images:", n_train)

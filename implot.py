@@ -1,12 +1,8 @@
-import matplotlib.pyplot as plt
+from load_cifar import load_batch
 import numpy as np
+import matplotlib.pyplot as plt
 
-# Import data
-from keras.datasets import cifar10
-(X_train, y_train), (X_test, y_test) = cifar10.load_data()
-
-y_train = y_train.flatten()
-y_test  = y_test.flatten()
+X_train, y_train = load_batch()
 
 n=0
 fig = plt.figure()
@@ -22,5 +18,4 @@ for c in range(0,10):
         n+=1
 
 fig.set_size_inches(12,12)
-plt.savefig('cifar10.png')
-
+plt.savefig('cifar10test.png')

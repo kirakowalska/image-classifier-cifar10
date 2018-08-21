@@ -52,8 +52,8 @@ Test accuracy: **81.5%**
 
 Finally, we improve the classification accuracy by classification using voting from three classifiers (logistic regression, decision tree classifier, linear SVM). The ensemble further boosts the classification accuracy. Again, see `experiments.ipynb` for more details.
 
-Test accuracy: **81.9%**
+Test accuracy: **81.7%**
 
 # Voilà! 
 
-Our classifier can now distinguish cats from horses from planes etc. with quite a good accuracy (81.9% to be exact)! Further work could make it even better using data augmentation (blurring, rotating), bagging and other ensemble learning approaches.
+Our classifier can now distinguish cats from horses from planes etc. with quite a good accuracy (81.7% to be exact)! Further work could make it even better using data augmentation (blurring, rotating), bagging and other ensemble learning approaches.

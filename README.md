@@ -20,7 +20,7 @@ Exemplary images in each class can be plotted by running `implot.py`.
 
 ### Train a shallow classifier to serve as a benchmark
 
-We use the [HoG descriptor](http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_hog.html) for feature extraction from images and linear SVM for classification. You can see HoG computed for an example image below. It captures contours in the image.
+We use the [HoG descriptor](http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_hog.html) for feature extraction from images and linear SVM for classification. You can see the HoG computed for an example image below. It captures contours in the image.
 
 <img src="https://github.com/kirakowalska/image-classifier-cifar10/blob/master/hog.png" width="600">
 
@@ -32,7 +32,7 @@ Test accuracy: **46.4%**
 
 ### Extract visual features using a pre-trained CNN network.
 
-Extract visual features from images using the VGG-16 network pretrained on Imagenet. We use the penultimate leayer of VGG-16 for feature computation. We call these features CNN codes.
+We extract visual features from images using the VGG-16 network pretrained on Imagenet. We use the penultimate leayer of VGG-16 for feature computation. We call these features CNN codes.
 
 ```
 from cnn import compute_features

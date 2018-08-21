@@ -31,7 +31,7 @@ Test accuracy: **46.4%**
 Extract visual features from images using the VGG-16 network pretrained on Imagenet. We use the penultimate leayer of VGG-16 for feature computation. We call these features CNN codes.
 
 ```
-from extract_features import compute_features
+from cnn import compute_features
 features_train = compute_features(X_train)
 ```
 We use Principal Component Analysis (PCA) to visualise the CNN nodes in two dimensions (see `experiments.ipynb`). Each colour corresponds to a different class in the CIFAR-10 dataset. You can see that the CNN nodes can separate the image classes into (overlapping) clusters.
@@ -52,8 +52,8 @@ Test accuracy: **81.5%**
 
 Finally, we improve the classification accuracy by classification using voting from three classifiers (logistic regression, decision tree classifier, linear SVM). The ensemble further boosts the classification accuracy. Again, see `experiments.ipynb` for more details.
 
-Test accuracy: **81.7%**
+Test accuracy: **81.9%**
 
 # Voilà! 
 
-Our classifier can now distinguish cats from horses from planes etc. with quite a good accuracy (81.7% to be exact)! Further work could make it even better using data augmentation (blurring, rotating), bagging and other ensemble learning approaches.
+Our classifier can now distinguish cats from horses from planes etc. with quite a good accuracy (81.9% to be exact)! Further work could make it even better using data augmentation (blurring, rotating), bagging and other ensemble learning approaches.

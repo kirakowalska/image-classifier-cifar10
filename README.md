@@ -20,7 +20,11 @@ Exemplary images in each class can be plotted by running `implot.py`.
 
 ### Train a shallow classifier to serve as a benchmark
 
-We use the [HoG descriptor](http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_hog.html) for feature extraction from images and linear SVM for classification. The classifier is trained and tested by running `benchmark.py`.
+We use the [HoG descriptor](http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_hog.html) for feature extraction from images and linear SVM for classification. You can see HoG computed for an example image below. It captures contours in the image.
+
+<img src="https://github.com/kirakowalska/image-classifier-cifar10/blob/master/hog.png" width="600">
+
+The SVM classifier is trained and tested by running `benchmark.py`.
 
 Train accuracy: 51.3%
 
@@ -52,8 +56,8 @@ Test accuracy: **81.5%**
 
 Finally, we improve the classification accuracy by classification using voting from three classifiers (logistic regression, decision tree classifier, linear SVM). The ensemble further boosts the classification accuracy. Again, see `experiments.ipynb` for more details.
 
-Test accuracy: **81.7%**
+Test accuracy: **81.9%**
 
 # Voilà! 
 
-Our classifier can now distinguish cats from horses from planes etc. with quite a good accuracy (81.7% to be exact)! Further work could make it even better using data augmentation (blurring, rotating), bagging and other ensemble learning approaches.
+Our classifier can now distinguish cats from horses from planes etc. with quite a good accuracy (81.9% to be exact)! Further work could make it even better using data augmentation (blurring, rotating), bagging and other ensemble learning approaches.
